@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portofolio Dila</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Hubungkan CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>Dila</h2>
+    <ul>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#skill">Skill</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Kontak</a></li>
+    </ul>
+</nav>
+
+<div class="hero">
+    <img src="https://i.pravatar.cc/300" alt="Foto Profil">
+    <h1>Halo, Saya <span>Dila</span> 👋</h1>
+    <p>Pelajar | Web Developer Pemula | Siap Berkembang 🚀</p>
+</div>
+
+<section id="about">
+    <h2>Tentang Saya</h2>
+    <p class="about-text">
+        Saya adalah pelajar yang sedang mendalami HTML, CSS, dan GitHub.
+        Saya memiliki semangat belajar tinggi dan ingin menjadi Web Developer profesional.
+    </p>
+</section>
+
+<section id="skill">
+    <h2>Skill</h2>
+    <div class="container">
+        <div class="card">
+            <h3>HTML</h3>
+            <p>Membuat struktur website yang rapi dan terstruktur.</p>
+        </div>
+        <div class="card">
+            <h3>CSS</h3>
+            <p>Mendesain tampilan modern dan responsive.</p>
+        </div>
+        <div class="card">
+            <h3>GitHub</h3>
+            <p>Mengelola dan mempublikasikan project.</p>
+        </div>
+    </div>
+</section>
+
+<section id="project">
+    <h2>Project</h2>
+    <div class="container">
+        <div class="card">
+            <h3>Landing Page</h3>
+            <p>Website promosi sederhana menggunakan HTML & CSS.</p>
+        </div>
+        <div class="card">
+            <h3>Web Portofolio</h3>
+            <p>Website pribadi untuk menampilkan skill dan project.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Kontak</h2>
+    <p>Email: dila@email.com</p>
+    <p>Instagram: <a href="#">@dilaaa</a></p>
+</section>
+
+<footer>
+    © 2026 Dila | All Rights Reserved
+</footer>
+
+</body>
+</html>
