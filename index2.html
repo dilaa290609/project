@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Developer</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#020617;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+nav h2{
+color:#38bdf8;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:80px 10%;
+flex-wrap:wrap;
+position:relative;
+background:linear-gradient(135deg,#0f172a,#020617);
+}
+
+/* Glow background */
+
+.hero::before{
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+background:#38bdf8;
+filter:blur(150px);
+opacity:0.3;
+top:-100px;
+left:-100px;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:350px;
+height:350px;
+background:#6366f1;
+filter:blur(150px);
+opacity:0.3;
+bottom:-120px;
+right:-120px;
+}
+
+.hero-text{
+max-width:500px;
+animation:fadeUp 1.5s ease;
+}
+
+.hero-text h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero-text span{
+color:#38bdf8;
+}
+
+.hero-text p{
+margin:20px 0;
+line-height:1.6;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:#38bdf8;
+color:#000;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 15px #38bdf8;
+}
+
+/* Floating Image */
+
+.hero img{
+animation:float 4s ease-in-out infinite;
+}
+
+/* PROJECT */
+
+.projects{
+padding:70px 10%;
+}
+
+.projects h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px) scale(1.03);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* SKILLS */
+
+.skills{
+padding:70px 10%;
+background:#020617;
+}
+
+.skill-list{
+display:flex;
+flex-direction:column;
+gap:20px;
+align-items:center;
+}
+
+.skill-box{
+width:300px;
+}
+
+.skill-title{
+margin-bottom:5px;
+}
+
+.progress{
+background:#334155;
+height:10px;
+border-radius:10px;
+overflow:hidden;
+}
+
+.progress-bar{
+height:10px;
+background:#38bdf8;
+}
+
+.percent{
+font-size:12px;
+margin-top:4px;
+text-align:right;
+}
+
+/* CONTACT */
+
+.contact{
+padding:70px 10%;
+text-align:center;
+}
+
+.contact a{
+color:#38bdf8;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+margin-top:40px;
+}
+
+/* ANIMATION */
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+100%{transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* RESPONSIVE MOBILE */
+
+@media (max-width:768px){
+
+nav{
+padding:15px 5%;
+}
+
+nav h2{
+font-size:18px;
+}
+
+nav ul{
+gap:12px;
+}
+
+nav a{
+font-size:14px;
+}
+
+/* HERO */
+
+.hero{
+flex-direction:column;
+text-align:center;
+padding:50px 5%;
+}
+
+.hero-text h1{
+font-size:26px;
+}
+
+.hero-text p{
+font-size:14px;
+}
+
+.hero img{
+width:180px;
+margin-top:20px;
+}
+
+/* BUTTON */
+
+.btn{
+padding:8px 18px;
+font-size:14px;
+}
+
+/* PROJECT */
+
+.projects{
+padding:50px 5%;
+}
+
+.projects h2{
+font-size:22px;
+}
+
+.card{
+padding:15px;
+}
+
+.card h3{
+font-size:16px;
+}
+
+.card p{
+font-size:13px;
+}
+
+/* SKILLS */
+
+.skills{
+padding:50px 5%;
+}
+
+.skill-box{
+width:90%;
+}
+
+.skill-title{
+font-size:14px;
+}
+
+.percent{
+font-size:11px;
+}
+
+/* CONTACT */
+
+.contact{
+padding:50px 5%;
+}
+
+.contact h2{
+font-size:22px;
+}
+
+.contact p{
+font-size:14px;
+}
+/* HOBBY */
+
+.hobby{
+padding:70px 10%;
+text-align:center;
+}
+
+.hobby-list{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.hobby-item{
+background:#1e293b;
+padding:15px 25px;
+border-radius:8px;
+transition:0.3s;
+}
+
+.hobby-item:hover{
+transform:translateY(-5px);
+background:#38bdf8;
+color:black;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+<h2>MyPortfolio</h2>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Hello, I'm <span>Dilaa</span></h1>
+
+<p>
+Frontend  Developer .
+Saya membuat website modern, responsive dan menarik.
+</p>
+
+
+</div>
+
+<img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" width="250">
+
+</section>
+
+<!-- PROJECTS -->
+
+<section class="projects" id="projects">
+
+<h2>My Projects</h2>
+
+<div class="project-grid">
+
+<div class="card">
+<h3>Website Company</h3>
+<p>Website profile perusahaan dengan HTML, CSS dan JS.</p>
+</div>
+
+<div class="card">
+<h3>E-Commerce</h3>
+<p>Toko online dengan fitur cart dan pembayaran.</p>
+</div>
+
+<div class="card">
+<h3>Dashboard Admin</h3>
+<p>Dashboard management menggunakan Bootstrap.</p>
+</div>
+
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>Website personal portfolio modern.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section class="skills" id="skills">
+
+<h2 style="text-align:center;margin-bottom:30px;">Skills</h2>
+
+<div class="skill-list">
+
+<div class="skill-box">
+<div class="skill-title">HTML</div>
+<div class="progress">
+<div class="progress-bar" style="width:90%"></div>
+</div>
+<div class="percent">90%</div>
+</div>
+
+<div class="skill-box">
+<div class="skill-title">CSS</div>
+<div class="progress">
+<div class="progress-bar" style="width:85%"></div>
+</div>
+<div class="percent">85%</div>
+</div>
+
+<div class="skill-box">
+<div class="skill-title">BOOSTSTRAP</div>
+<div class="progress">
+<div class="progress-bar" style="width:75%"></div>
+</div>
+<div class="percent">65%</div>
+</div>
+
+</div>
+<!-- HOBBY -->
+
+<section class="hobby">
+
+<h2>My Hobbies</h2>
+
+<div class="hobby-list">
+
+<div class="hobby-item">🎥 Videografi</div>
+<div class="hobby-item">🎨 Design</div>
+<div class="hobby-item">🎮 epep,roblox,picopark</div>
+<div class="hobby-item">📷 Fotografi</div>
+
+</div>
+
+</section>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2>Contact Me</h2>
+
+<p>Email : dilaaa24009gmail.com</p>
+<p>Github : <a href="#">@dilaaa24009gmail.com</a></p>
+
+</section>
+
+<footer>
+<p>© 2026 My Portfolio</p>
+</footer>
+
+</body>
+</html>
